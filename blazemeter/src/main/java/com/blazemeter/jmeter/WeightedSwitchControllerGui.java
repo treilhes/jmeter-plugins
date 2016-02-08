@@ -94,6 +94,7 @@ public class WeightedSwitchControllerGui extends AbstractControllerGui {
                     }
                 }
                 grid.getModel().addRow(new String[]{node.getTestElement().getName(), w});
+                // FIXME: what about disabled items? will they screw up it all?
             }
         }
     }
@@ -118,5 +119,6 @@ public class WeightedSwitchControllerGui extends AbstractControllerGui {
     @Override
     public void clearGui() {
         super.clearGui();
+        grid.getModel().clearData();
     }
 }
